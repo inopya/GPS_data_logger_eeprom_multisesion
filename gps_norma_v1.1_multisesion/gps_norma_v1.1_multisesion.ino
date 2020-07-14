@@ -640,31 +640,11 @@ bool readAccel()
   uint8_t numBytesToRead = 6;
   readFrom(ACELEROMETRO_ADDR, DATAX0, numBytesToRead, _buff);
  
-  //Leer los valores del registro y convertir a int (Cada eje tiene 10 bits, en 2 Bytes LSB)
+  //Leer los valores del registro y convertir a int (Cada eje tiene 10 bits, en 2 Bytes, LSB y MSB)
   int x = (((int)_buff[1]) << 8) | _buff[0];   
   int y = (((int)_buff[3]) << 8) | _buff[2];
   int z = (((int)_buff[5]) << 8) | _buff[4];
   
-//  Serial.print("x: ");
-//  Serial.print( x );
-//  Serial.print(" y: ");
-//  Serial.print( y );
-//  Serial.print(" z: ");
-//  Serial.println( z );
-
-  struct_datos_acelerometro info_acelerometro;
-  info_acelerometro.x = x;
-  info_acelerometro.y = y;
-  info_acelerometro.z = z;
-
-
-//  Serial.print("x: ");
-//  Serial.print( abs(old_x-x) );
-//  Serial.print(" y: ");
-//  Serial.print( abs(old_y-y) );
-//  Serial.print(" z: ");
-//  Serial.println( abs(old_z-z) );
-
   //if((abs(old_x-x)+abs(old_y-y)+abs(old_z-z)) > 5){
   if(abs(old_x-x) > 2){
     FLAG_movimiento = true;
