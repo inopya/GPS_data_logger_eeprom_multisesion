@@ -10,4 +10,4 @@ Es bien sabido que los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo 
 
 TODO: 
 * subir el esquema de fritzzing y alguno ficheros de datos recopilados.
-* "Condicionar" ciertas lieas print que corresponden a mensajes de ayuda para debug
+* "Condicionar" el mostrar algunas lineas print que corresponden a mensajes de ayuda para debug
