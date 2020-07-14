@@ -8,4 +8,6 @@ Dispone de un acelerometro para detectar que Norma se ha quedado parada y no gra
 Es bien sabido que los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de puntos" aun estando en una poscion fija.
 
 
-TODO: subir el esquema de fritzzing y alguno ficheros de datos recopilados.
+TODO: 
+* subir el esquema de fritzzing y alguno ficheros de datos recopilados.
+* "Condicionar" ciertas lieas print que corresponden a mensajes de ayuda para debug
