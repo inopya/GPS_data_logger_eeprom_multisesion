@@ -800,41 +800,42 @@ void load_moment(uint16_t puntero)
   /* cargar DIA */
   memory_chip.load(puntero_memoria, dato); 
   if(dato < 10){ Serial.print(F("0")); }
-  if( dato>31 ){ FLAG_error_fecha; }
+  if( dato>31 ){ FLAG_error_fecha=true; }
   Serial.print(dato); Serial.print(F("/"));
   puntero_memoria+=1;
 
   /* cargar MES */
   memory_chip.load(puntero_memoria, dato);
   if(dato < 10){ Serial.print(F("0")); }
-  if( dato>12 ){ FLAG_error_fecha; }
+  if( dato>12 ){ FLAG_error_fecha=true; }
   Serial.print(dato); Serial.print(F("/"));
   puntero_memoria+=1;
 
   /* cargar AÑO */
   uint16_t dato2;
   memory_chip.load(puntero_memoria, dato2);
-  if( dato>2100 ){ FLAG_error_fecha; }
+  if( dato<2020 ){ FLAG_error_fecha=true; }
+  if( dato>2100 ){ FLAG_error_fecha=true; }
   Serial.print(dato2); Serial.print(F("\t"));
   puntero_memoria+=2;
   
   /* cargar HORAS */
   memory_chip.load(puntero_memoria, dato);
-  if( dato>23 ){ FLAG_error_fecha; }
+  if( dato>23 ){ FLAG_error_fecha=true; }
   if(dato < 10){ Serial.print(F("0")); }
   Serial.print(dato); Serial.print(F(":"));
   puntero_memoria+=1;
 
   /* cargar MINUTOS */
   memory_chip.load(puntero_memoria, dato);
-  if( dato>59 ){ FLAG_error_fecha; }
+  if( dato>59 ){ FLAG_error_fecha=true; }
   if(dato < 10){ Serial.print(F("0")); }
   Serial.print(dato); Serial.print(F(":"));
   puntero_memoria+=1;
 
   /* cargar SEGUNDOS */
   memory_chip.load(puntero_memoria, dato);
-  if( dato>59 ){ FLAG_error_fecha; }
+  if( dato>59 ){ FLAG_error_fecha=true; }
   if(dato < 10){ Serial.print(F("0")); }
   Serial.println(dato);
   puntero_memoria+=1;
