@@ -71,3 +71,11 @@ Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de
     * APAGADO: Modo Activo, GPS ok, esperando entre muestras.
 
 ![](./GPS_data_logger.png)
+
+
+**Menu Serial**
+![](./menu_serial.png)
+
+
+**Informacion de sesiones**
+![](./sesiones.png)
