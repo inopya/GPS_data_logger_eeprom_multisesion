@@ -1333,7 +1333,11 @@ void read_one_sesion( uint8_t n_sesion )
 //  MOSTAR ERROR SESION NO VALIDA
 //========================================================
 void print_error_size()
-{  
+{ 
+ /*
+  * Mostar mensaje de sesion no valida cuando algun problema en sus punteros 
+  * haga que el tamaño a mostrar no sea un valor logico.
+  */	
   Serial.println(F("\nDEBUG >> ESTA SESION NO ES VALIDA, la saltamos\n")); 
 }
 
