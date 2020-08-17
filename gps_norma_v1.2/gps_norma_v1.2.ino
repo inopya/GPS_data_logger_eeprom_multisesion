@@ -150,6 +150,7 @@ void writeToWire(int device, byte address, byte val);
 void readFromWire(int device, byte address, int num, byte _buff[]);
 void read_all_sesion( void );
 void read_one_sesion( uint8_t contador );
+void print_error_size( void );
 void listar_datos_de_sesion(uint16_t _puntero_lectura, uint16_t _size);
 void mostrar_informacion_raw( void );
 void soft_erase_eeprom( void );
@@ -1306,6 +1307,7 @@ void read_one_sesion( uint8_t n_sesion )
     memory_chip.load(POS_MEM_SESION_FAT_START, prt_inicio);  // uso de un puntero temporal
     sesion_size = prt_inicio-POS_MEM_USER_DATA_START;  
     sesion_size = sesion_size / USER_DATA_SIZE; 
+    if(sesion_size==0){ print_error_size(); return; }
     listar_datos_de_sesion(POS_MEM_USER_DATA_START, sesion_size); //listar_datos_de_sesion(puntero_inicio, tamaño)
     return;
   }
@@ -1320,17 +1322,19 @@ void read_one_sesion( uint8_t n_sesion )
   	/* la diferencia entre esos dos punteros será el tamaño de la sesion: */
     sesion_size = ptr_final-prt_inicio; 
     sesion_size = sesion_size / USER_DATA_SIZE; 
+    if(sesion_size==0){ print_error_size(); return; }
     listar_datos_de_sesion(prt_inicio, sesion_size); //listar_datos_de_sesion(puntero_inicio, tamaño)
     return;
   }
-      
-  if(sesion_size==0){
-    Serial.print(F("punteros prt_inicio, ptr_final: "));
-    Serial.print(prt_inicio);
-    Serial.print(F(" , "));Serial.println(ptr_final);
-    Serial.println(F("\nDEBUG >> ESTA SESION NO ES VALIDA, la saltamos\n")); 
-  }
-  return;
+}
+
+
+//========================================================
+//  MOSTAR ERROR SESION NO VALIDA
+//========================================================
+void print_error_size()
+{  
+  Serial.println(F("\nDEBUG >> ESTA SESION NO ES VALIDA, la saltamos\n")); 
 }
 
 
