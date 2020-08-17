@@ -74,7 +74,7 @@ Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de
 
 
 **Menu Serial**
-![](./menu_serial.png)
+![](./menu_seria.png)
 
 
 **Informacion de sesiones**
