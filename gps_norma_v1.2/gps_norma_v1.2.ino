@@ -814,8 +814,8 @@ void load_moment(uint16_t puntero)
   /* cargar AÑO */
   uint16_t dato2;
   memory_chip.load(puntero_memoria, dato2);
-  if( dato<2020 ){ FLAG_error_fecha=true; }
-  if( dato>2100 ){ FLAG_error_fecha=true; }
+  if( dato2<2020 ){ FLAG_error_fecha=true; }
+  if( dato2>2100 ){ FLAG_error_fecha=true; }
   Serial.print(dato2); Serial.print(F("\t"));
   puntero_memoria+=2;
   
