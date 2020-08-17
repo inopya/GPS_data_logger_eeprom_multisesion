@@ -8,6 +8,7 @@ Dispone de un acelerometro para detectar que Norma se ha quedado parada y no gra
 Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de puntos" aun estando en una poscion fija.
 
    ===== NOTAS DE LA VERSION =====
+   
    GPS data logger para Norma la perra,
    Version para corregir los problemas de la version con grabacion en SD
    que corrompia las tarjetas si las sesiones eran muy largas (y la bateria se agotaba).
