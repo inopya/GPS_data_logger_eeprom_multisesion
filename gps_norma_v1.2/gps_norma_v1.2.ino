@@ -890,7 +890,7 @@ void mostrar_menu_serial()
   Serial.println(F("\t'+' selecciona bloque SIGUIENTE de 10 sesiones"));
   Serial.println(F("\t'-' selecciona bloque PREVIO de 10 sesiones"));
   Serial.println(F("\t'L' LISTAR todos los datos grabados"));
-  Serial.println(F("\t'v' DEBUG - Test Read Zero"));
+  //Serial.println(F("\t'v' DEBUG - Test Read Zero"));
   Serial.println(F("\t'r' DEBUG - Mostrar RAW"));
   Serial.println(F("\t'a' DEBUG - Activa/Desactiva el Acelerometro"));
   Serial.println(F("\t't' mostrar Tiempo restante"));
