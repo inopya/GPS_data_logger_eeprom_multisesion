@@ -83,5 +83,9 @@ Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de
 ![](./sesiones.png)
 
 
-**Representacion sobre mapa de una ruta de Norma**
+**Representacion sobre mapa de algunas rutas de Norma**
 ![](./paseo_cabo.png)
+
+
+![](./playa2.png)
+
