@@ -87,5 +87,5 @@ Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de
 ![](./playa1.png)
 
 
-![](./playa2.png)
+![](./playa_2.png)
 
