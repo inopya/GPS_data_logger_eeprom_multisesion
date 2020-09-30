@@ -5,7 +5,7 @@ Es decir puede acumualr sesiones sucesivas de manera que no sobreescribe los dat
 
 Version actual,  v1.2
 Dispone de un acelerometro para detectar que Norma se ha quedado parada y no grabar datos.
-Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo genera "una nube de puntos" aun estando en una poscion fija.
+Los modulos GPS NEO6/7/8 tienen un cierto error de deriva lo que genera "una nube de puntos" aun estando en una poscion fija.
 
    ===== NOTAS DE LA VERSION =====
    
